@@ -15,6 +15,8 @@ agent_debug=$(jq --raw-output ".agent.debug" $CONFIG_PATH)
 agent_quiet=$(jq --raw-output ".agent.quiet" $CONFIG_PATH)
 
 outputs_influxdb_database=$(jq --raw-output ".outputs.influxdb_database" $CONFIG_PATH)
+outputs_influxdb_user=$(jq --raw-output ".outputs.influxdb_user" $CONFIG_PATH)
+outputs_influxdb_pass=$(jq --raw-output ".outputs.influxdb_pass" $CONFIG_PATH)
 outputs_influxdb_precision=$(jq --raw-output ".outputs.influxdb_precision" $CONFIG_PATH)
 outputs_influxdb_timeout=$(jq --raw-output ".outputs.influxdb_timeout" $CONFIG_PATH)
 outputs_influxdb_urls=$(jq --raw-output ".outputs.influxdb_urls | length" $CONFIG_PATH)
@@ -73,6 +75,8 @@ configuration="
 [[outputs.influxdb]]
   urls = $outputs_influxdb_url # required
   database = \"$outputs_influxdb_database\" # required
+  username = \"$outputs_influxdb_user\" # required
+  password = \"$outputs_influxdb_pass\" # required
   precision = \"$outputs_influxdb_precision\"
   timeout = \"$outputs_influxdb_timeout\"
 
