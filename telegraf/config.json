@@ -6,7 +6,6 @@
   "url": "https://hub.docker.com/_/telegraf/",
   "startup": "system",
   "boot": "auto",
-  "arch": ["armhf"],
   "ports": {
     "8092/udp": 8092,
     "8094": 8094,
