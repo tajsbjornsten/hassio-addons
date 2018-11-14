@@ -2,7 +2,7 @@
   "name": "Telegraph",
   "version": "1.3.3",
   "slug": "telegraf",
-  "description": "Telegraf add-on!",
+  "description": "Telegraf add-on! test",
   "url": "https://hub.docker.com/_/telegraf/",
   "startup": "system",
   "boot": "auto",
